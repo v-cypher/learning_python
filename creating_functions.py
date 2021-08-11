@@ -1,3 +1,4 @@
+###############FUNCTIONS#####################
 # Use "def" to create new functions
 def add(x, y):
     print("x is {} and y is {}".format(x, y))
@@ -29,32 +30,18 @@ keyword_args(big="foot", loch="ness")  # => {"big": "foot", "loch": "ness"}
 def all_the_args(*args, **kwargs):
     print(args)
     print(kwargs)
-"""
-all_the_args(1, 2, a=3, b=4) prints:
-    (1, 2)
-    {"a": 3, "b": 4}
-"""
 
 # When calling functions, you can do the opposite of args/kwargs!
 # Use * to expand tuples and use ** to expand kwargs.
 args = (1, 2, 3, 4)
 kwargs = {"a": 3, "b": 4}
-all_the_args(*args)            # equivalent to all_the_args(1, 2, 3, 4)
-all_the_args(**kwargs)         # equivalent to all_the_args(a=3, b=4)
-all_the_args(*args, **kwargs)  # equivalent to all_the_args(1, 2, 3, 4, a=3, b=4)
+all_the_args(*args)            
+all_the_args(**kwargs)        
+all_the_args(*args, **kwargs)  
 
 # Returning multiple values (with tuple assignments)
 def swap(x, y):
-    return y, x  # Return multiple values as a tuple without the parenthesis.
-                 # (Note: parenthesis have been excluded but can be included)
-
-x = 1
-y = 2
-x, y = swap(x, y)     # => x = 2, y = 1
-# (x, y) = swap(x,y)  # Again parenthesis have been excluded but can be included.
-
-# Function Scope
-x = 5
+    return y, x  
 
 def set_x(num):
     # Local var x not the same as global variable x
