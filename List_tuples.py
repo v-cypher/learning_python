@@ -1,38 +1,26 @@
+##########PRINT_FUNCTION##########
 # Python has a print function
-print("I'm Python. Nice to meet you!")  # => I'm Python. Nice to meet you!
+print("Hello world! I am coming.")  # => Hello world! I am coming.
 
-# By default the print function also prints out a newline at the end.
 # Use the optional argument end to change the end string.
-print("Hello, World", end="!")  # => Hello, World!
+print("Hello, I am Mohit", end="!")  # => Hello, I am Mohit.
 
 # Simple way to get input data from console
 input_string_var = input("Enter some data: ") # Returns the data as a string
 
-# There are no declarations, only assignments.
-# Convention is to use lower_case_with_underscores
-some_var = 5
-some_var  # => 5
-
-# Accessing a previously unassigned variable is an exception.
-# See Control Flow to learn more about exception handling.
-some_unknown_var  # Raises a NameError
-
-# if can be used as an expression
-# Equivalent of C's '?:' ternary operator
-"yay!" if 0 > 1 else "nay!"  # => "nay!"
-
+###########LIST####################
 # Lists store sequences
 li = []
 # You can start with a prefilled list
 other_li = [4, 5, 6]
 
-# Add stuff to the end of a list with append
+# Add elements to the end of a list with append function.
 li.append(1)    # li is now [1]
 li.append(2)    # li is now [1, 2]
 li.append(4)    # li is now [1, 2, 4]
 li.append(3)    # li is now [1, 2, 4, 3]
-# Remove from the end with pop
-li.pop()        # => 3 and li is now [1, 2, 4]
+# Remove from the end with pop function is used
+li.pop() or li.pop(4) #both are same  # => 3 and li is now [1, 2, 4]
 # Let's put it back
 li.append(3)    # li is now [1, 2, 4, 3] again.
 
@@ -40,12 +28,11 @@ li.append(3)    # li is now [1, 2, 4, 3] again.
 li[0]   # => 1
 # Look at the last element
 li[-1]  # => 3
-
+#index start from position 0 
+#First element is [0]
 # Looking out of bounds is an IndexError
-li[4]  # Raises an IndexError
+li[4]  # Raises an IndexError because it does not exist.
 
-# You can look at ranges with slice syntax.
-# The start index is included, the end index is not
 # (It's a closed/open range for you mathy types.)
 li[1:3]   # Return list from index 1 to 3 => [2, 4]
 li[2:]    # Return list starting from index 2 => [4, 3]
@@ -58,14 +45,11 @@ li[::-1]  # Return list in reverse order => [3, 4, 2, 1]
 # Make a one layer deep copy using slices
 li2 = li[:]  # => li2 = [1, 2, 4, 3] but (li2 is li) will result in false.
 
-# Remove arbitrary elements from a list with "del"
-del li[2]  # li is now [1, 2, 3]
-
 # Remove first occurrence of a value
 li.remove(2)  # li is now [1, 3]
 li.remove(2)  # Raises a ValueError as 2 is not in the list
 
-# Insert an element at a specific index
+# Insert an element at a specific index with index function.
 li.insert(1, 2)  # li is now [1, 2, 3] again
 
 # Get the index of the first item found matching the argument
@@ -79,13 +63,13 @@ li + other_li  # => [1, 2, 3, 4, 5, 6]
 # Concatenate lists with "extend()"
 li.extend(other_li)  # Now li is [1, 2, 3, 4, 5, 6]
 
-# Check for existence in a list with "in"
+# "in is used for check existance of any element"
 1 in li  # => True
 
 # Examine the length with "len()"
 len(li)  # => 6
 
-
+#############TUPLE############
 # Tuples are like lists but are immutable.
 tup = (1, 2, 3)
 tup[0]      # => 1
@@ -110,5 +94,5 @@ a, *b, c = (1, 2, 3, 4)  # a is now 1, b is now [2, 3] and c is now 4
 # Tuples are created by default if you leave out the parentheses
 d, e, f = 4, 5, 6  # tuple 4, 5, 6 is unpacked into variables d, e and f
 # respectively such that d = 4, e = 5 and f = 6
-# Now look how easy it is to swap two values
+# Now look how easy it is to swap two values with out third variable.
 e, d = d, e  # d is now 5 and e is now 4
