@@ -76,4 +76,44 @@ filled_set | other_set  # => {1, 2, 3, 4, 5, 6}
 # Check for existence in a set with in
 2 in filled_set   # => True
 10 in filled_set  # => False
-##################END###############################VK##############
+
+##############CONDITIONS_&_LOOPS##############
+# Let's just make a variable
+some_var = 5
+
+# Here is an if statement. Indentation is significant in Python!
+# Convention is to use four spaces, not tabs.
+# This prints "some_var is smaller than 10"
+if some_var > 10:
+    print("some_var is totally bigger than 10.")
+elif some_var < 10:    
+    print("some_var is smaller than 10.")
+else:                 
+    print("some_var is indeed 10.")
+
+for animal in ["dog", "cat", "mouse"]:
+    # You can use format() to interpolate formatted strings
+    print("{} is a mammal".format(animal))
+
+
+for i in range(4):
+    print(i)
+
+
+for i in range(4, 8):
+    print(i)
+
+
+
+for i in range(4, 8, 2):
+    print(i)
+
+animals = ["dog", "cat", "mouse"]
+for i, value in enumerate(animals):
+    print(i, value)
+
+x = 0
+while x < 4:
+    print(x)
+    x += 1  # Shorthand for x = x + 1
+    ##################END###############################VK##############
